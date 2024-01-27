@@ -2,17 +2,36 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        light: {
+          100: "#fafafa",
+          50: "#ffffff",
+        },
+        dark: {
+          100: "#00141e",
+          50: "#001e28",
+        },
+        icons: { 100: "#93a3c7", 200: "#fe4548" },
       },
+      gridTemplateColumns: {
+        "auto-fill-minmax": "repeat(auto-fill, minmax(280px, 1fr))",
+      },
+      fontFamily: {
+        worksans: ["Work Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        sans: ["Roboto Slab", "sans-serif"],
+      },
+      boxShadow: {
+        card: "0px 1px 2px 0px rgba(0, 0, 0, 0.1)",
+        slide: "1px 1px 10px 2px rgb(29 111 139)",
+      },
+      screens: { xsm: "470px" },
     },
   },
   plugins: [],
