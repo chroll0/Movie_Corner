@@ -15,7 +15,7 @@ interface MovieProps {
   Type: string;
 }
 
-const Home = ({ currentTheme }) => {
+const Home = ({ currentTheme }: { currentTheme: string }) => {
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [year, setYear] = useState("");
 

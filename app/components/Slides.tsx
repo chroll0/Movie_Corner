@@ -11,7 +11,7 @@ interface MovieProps {
   Type: string;
 }
 
-const Slides = ({ currentTheme }) => {
+const Slides = ({ currentTheme }: { currentTheme: string }) => {
   const [firstMovies, setFirstMovies] = useState<MovieProps[]>([]);
 
   const searchMoviesForSlideMovies = async () => {
