@@ -25,7 +25,7 @@ const App: React.FC = () => {
       <Navbar onToggleTheme={toggleTheme} currentTheme={theme} />
 
       <div className="flex flex-col items-center paddings">
-        <Home />
+        <Home currentTheme={theme} />
       </div>
     </main>
   );

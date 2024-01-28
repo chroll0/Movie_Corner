@@ -11,7 +11,7 @@ interface MovieProps {
   Type: string;
 }
 
-const Slides = () => {
+const Slides = ({ currentTheme }) => {
   const [firstMovies, setFirstMovies] = useState<MovieProps[]>([]);
 
   const searchMoviesForSlideMovies = async () => {
@@ -37,7 +37,11 @@ const Slides = () => {
           key={index}
           className="min-w-[230px] max-w-[260px] hide-scrollbar flex flex-col"
         >
-          <div className="h-[310px] bg-gray-300 overflow-y-hidden rounded-lg shadow-slide">
+          <div
+            className={`h-[310px] bg-gray-300 overflow-y-hidden rounded-lg shadow-slide  ${
+              currentTheme === "dark" ? "dark_elements" : "light_elements"
+            }`}
+          >
             <img src={movie.Poster} alt={movie.Title} />
           </div>
         </div>

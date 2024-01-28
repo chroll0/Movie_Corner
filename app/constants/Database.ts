@@ -1,4 +1,4 @@
-export const API_URL = "http://www.omdbapi.com?apikey=8521fb6e";
+export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const SlideMovies = [
   { title: "The Godfather" },
