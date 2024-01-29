@@ -1,17 +1,6 @@
-import { ReactNode } from "react";
-
-interface LayoutProps {
-  currentTheme: string;
-  children: ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children, currentTheme }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div
-      className={`flex items-center justify-center w-full min-h-screen ${
-        currentTheme === "dark" ? "dark_background" : "light_background"
-      }`}
-    >
+    <div className="flex items-center justify-center w-full min-h-screen">
       {children}
     </div>
   );
