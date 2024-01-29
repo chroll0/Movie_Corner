@@ -18,7 +18,7 @@
     @apply md:ml-32 ml-0 px-8 lg:px-14 md:py-20 sm:py-40 py-32;
   }
   .navbar {
-    @apply flex items-center justify-between flex-col gap-[10%] h-full py-12 px-7 rounded-3xl;
+    @apply flex items-center justify-between flex-col gap-[10%] h-full py-12 px-4 rounded-xl min-w-[100px];
   }
   .mobile_navbar {
     @apply flex items-center justify-between flex-row py-6 sm:px-12 px-6 rounded-lg;

@@ -14,6 +14,7 @@ const config: Config = {
           50: "#ffffff",
         },
         dark: {
+          200: "#001e28e8",
           100: "#00141e",
           50: "#001e28",
         },

@@ -1,19 +1,27 @@
 "use client";
 
-import React, { useState } from "react";
-import { usePathname } from "next/navigation";
-
-// Import components
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Home from "../pages/homePage";
 
 const App: React.FC = () => {
-  // State to manage the theme (light/dark)
   const [theme, setTheme] = useState<string>("light");
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // Function to toggle the theme
+  // Simulate data loading
+  useEffect(() => {
+    fetchData().then(() => {
+      setIsLoading(false); // Update loading state when data is loaded
+    });
+  }, []);
+
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  const fetchData = async () => {
+    // Simulate fetch delay
+    await new Promise((resolve) => setTimeout(resolve));
   };
 
   return (
@@ -22,11 +30,22 @@ const App: React.FC = () => {
         theme === "dark" ? "dark_background" : "light_background"
       }`}
     >
-      <Navbar onToggleTheme={toggleTheme} currentTheme={theme} />
+      {isLoading ? (
+        <div
+          className="flex justify-center items-center h-screen tracking-wider font-medium
+        font-worksans text-sm"
+        >
+          Loading...
+        </div>
+      ) : (
+        <>
+          <Navbar onToggleTheme={toggleTheme} currentTheme={theme} />
 
-      <div className="flex flex-col items-center paddings">
-        <Home currentTheme={theme} />
-      </div>
+          <div className="flex flex-col items-center paddings">
+            <Home currentTheme={theme} />
+          </div>
+        </>
+      )}
     </main>
   );
 };
