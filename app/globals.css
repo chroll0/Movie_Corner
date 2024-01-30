@@ -24,7 +24,7 @@
     @apply flex items-center justify-between flex-row py-6 sm:px-12 px-6 rounded-lg;
   }
   .navbar_icons {
-    @apply w-5 h-5 hover:text-icons-100 cursor-pointer transition-all duration-100;
+    @apply w-6 h-6 hover:text-icons-100 cursor-pointer transition-all duration-100;
   }
 
   .light_background {

@@ -1,16 +1,11 @@
-import React from "react";
 import HomePage from "./homepage/page";
 
-interface PageProps {
-  currentTheme: string;
-}
-
-const Page: React.FC<PageProps> = ({ currentTheme }) => {
+const Home = () => {
   return (
     <>
-      <HomePage currentTheme={currentTheme} />
+      <HomePage />
     </>
   );
 };
 
-export default Page;
+export default Home;

@@ -13,7 +13,7 @@ const ThemeChanger: React.FC<ThemeChangerProps> = ({
     <div className="navbar_icons flex items-center justify-center">
       <button
         onClick={onToggleTheme}
-        className="flex items-center justify-center text-sm"
+        className="flex items-center justify-center text-sm w-full h-full"
       >
         <IoMoonSharp />
         {/* {currentTheme === "dark" ? "Dark" : "Light"} */}

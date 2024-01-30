@@ -15,7 +15,7 @@ interface MovieProps {
   Type: string;
 }
 
-const HomePage = ({ currentTheme }: { currentTheme: string }) => {
+const HomePage = () => {
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [year, setYear] = useState("");
 
@@ -62,7 +62,7 @@ const HomePage = ({ currentTheme }: { currentTheme: string }) => {
       </h1>
 
       <div>
-        <Slides currentTheme={currentTheme} />
+        <Slides />
         <div className="pb-16 max-w-[450px]">
           <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide font-bold">
             Cinematic Delights Across Eras,
