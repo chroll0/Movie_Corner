@@ -34,10 +34,10 @@
     @apply bg-dark-100 text-light-100;
   }
   .light_elements {
-    @apply bg-light-50 text-dark-50 shadow-navbar;
+    @apply bg-light-50 text-dark-50;
   }
   .dark_elements {
-    @apply bg-dark-50 text-light-50 shadow-slide;
+    @apply bg-dark-50 text-light-50;
   }
 
   .card-hover {

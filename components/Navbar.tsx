@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, currentTheme }) => {
   return (
     <div className="md:fixed top-0 left-0 md:h-full h-auto sm:px-6 sm:py-8 px-0 py-0 absolute md:w-auto w-full">
       <nav
-        className={`md:navbar mobile_navbar transition-all duration-300 ${
+        className={`md:navbar mobile_navbar transition-all duration-300 shadow-slide ${
           currentTheme === "dark" ? "dark_elements" : "light_elements"
         }
 `}

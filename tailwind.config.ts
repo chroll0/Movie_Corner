@@ -29,8 +29,7 @@ const config: Config = {
         sans: ["Roboto Slab", "sans-serif"],
       },
       boxShadow: {
-        navbar: "1px 1px 10px 2px rgb(203 203 203)",
-        slide: "1px 1px 10px 2px rgb(29 111 139)",
+        slide: "1px 1px 8px 1px #b3b3b3",
       },
       screens: { xsm: "470px" },
     },
