@@ -1,6 +1,11 @@
+import React from "react";
 import HomePage from "./homepage/page";
 
-const Home: React.FC<{ currentTheme: string }> = ({ currentTheme }) => {
+interface HomeProps {
+  currentTheme: string;
+}
+
+const Home: React.FC<HomeProps> = ({ currentTheme }) => {
   return (
     <>
       <HomePage currentTheme={currentTheme} />
