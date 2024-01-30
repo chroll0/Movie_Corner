@@ -1,10 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Home from "../pages/homePage";
+import Navbar from "../../components/Navbar";
 
-const App: React.FC = () => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [theme, setTheme] = useState<string>("light");
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -23,7 +26,6 @@ const App: React.FC = () => {
     // Simulate fetch delay
     await new Promise((resolve) => setTimeout(resolve));
   };
-
   return (
     <main
       className={`min-h-[100svh] transition-all duration-300 relative ${
@@ -33,7 +35,7 @@ const App: React.FC = () => {
       {isLoading ? (
         <div
           className="flex justify-center items-center h-screen tracking-wider font-medium
-        font-worksans text-sm"
+            font-worksans text-sm"
         >
           Loading...
         </div>
@@ -41,13 +43,9 @@ const App: React.FC = () => {
         <>
           <Navbar onToggleTheme={toggleTheme} currentTheme={theme} />
 
-          <div className="flex flex-col items-center paddings">
-            <Home currentTheme={theme} />
-          </div>
+          <div className="flex flex-col items-center paddings">{children}</div>
         </>
       )}
     </main>
   );
-};
-
-export default App;
+}

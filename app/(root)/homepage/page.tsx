@@ -3,9 +3,9 @@
 import { BiSearchAlt } from "react-icons/bi";
 
 import { useState, useEffect } from "react";
-import MovieCard from "../components/MovieCard";
-import Slides from "../components/Slides";
-import { API_URL } from "../constants/Database";
+import MovieCard from "../../../components/MovieCard";
+import Slides from "../../../components/Slides";
+import { API_URL } from "../../../constants/Database";
 
 interface MovieProps {
   imdbID: string;
@@ -15,7 +15,7 @@ interface MovieProps {
   Type: string;
 }
 
-const Home = ({ currentTheme }: { currentTheme: string }) => {
+const HomePage = ({ currentTheme }: { currentTheme: string }) => {
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [year, setYear] = useState("");
 
@@ -140,4 +140,4 @@ const Home = ({ currentTheme }: { currentTheme: string }) => {
   );
 };
 
-export default Home;
+export default HomePage;
