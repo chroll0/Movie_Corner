@@ -1,10 +1,12 @@
-import ThemeChanger from "./ThemeChanger";
 import { RiFilmFill } from "react-icons/ri";
 import { PiTelevisionBold } from "react-icons/pi";
 import { IoGrid } from "react-icons/io5";
 import { MdBookmarks, MdMovie } from "react-icons/md";
+
 import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+
+import ThemeChanger from "./ThemeChanger";
 
 interface NavbarProps {
   onToggleTheme: () => void;
@@ -26,8 +28,14 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, currentTheme }) => {
           <Link href="/" scroll={true}>
             <IoGrid className="navbar_icons" />
           </Link>
-          <RiFilmFill className="navbar_icons" />
-          <PiTelevisionBold className="navbar_icons" />
+
+          <Link href="../films">
+            <RiFilmFill className="navbar_icons" />
+          </Link>
+
+          <Link href="../serials">
+            <PiTelevisionBold className="navbar_icons" />
+          </Link>
 
           <Link href="../bookmarks">
             <MdBookmarks className="navbar_icons" />

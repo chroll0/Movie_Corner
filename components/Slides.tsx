@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { API_URL, SlideMovies } from "../constants/Database";
+import { API_URL } from "../constants/Database";
 
 interface MovieProps {
   imdbID: string;
@@ -10,12 +10,19 @@ interface MovieProps {
   Title: string;
   Type: string;
 }
+interface SlideData {
+  title: string;
+}
 
-const Slides = () => {
+interface SlidesProps {
+  dataProp: SlideData[];
+}
+
+const Slides = ({ dataProp }: SlidesProps) => {
   const [firstMovies, setFirstMovies] = useState<MovieProps[]>([]);
 
   const searchMoviesForSlideMovies = async () => {
-    const moviesPromises = SlideMovies.map(async (slide) => {
+    const moviesPromises = dataProp.map(async (slide) => {
       const url = `${API_URL}&s=${slide.title}`;
       const response = await fetch(url);
       const data = await response.json();

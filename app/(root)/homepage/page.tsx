@@ -5,7 +5,11 @@ import { BiSearchAlt } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import MovieCard from "../../../components/MovieCard";
 import Slides from "../../../components/Slides";
-import { API_URL } from "../../../constants/Database";
+import {
+  API_URL,
+  SlideClassicMovie,
+  SlideMovies,
+} from "../../../constants/Database";
 
 interface MovieProps {
   imdbID: string;
@@ -57,26 +61,47 @@ const HomePage = () => {
 
   return (
     <div className="font-poppins hide-scrollbar overflow-x-auto w-full flex flex-col justify-center p-1">
-      <h1 className="font-sans text-3xl font-extrabold tracking-wider text-gradient">
+      <h1 className="font-sans text-[38px] font-extrabold tracking-wider text-gradient">
         Movie Corner
       </h1>
 
       <div>
-        <Slides />
-        <div className="pb-16 max-w-[450px]">
-          <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide font-bold">
+        <div className="pt-12 max-w-[450px]">
+          <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide">
             Cinematic Delights Across Eras,
           </h3>
-          <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide font-bold text-end">
+          <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide text-end">
             Movies for All Tastes
           </h3>
         </div>
+        <Slides dataProp={SlideMovies} />
       </div>
 
-      <form onSubmit={(e) => e.preventDefault()}>
+      <div>
+        <div className="pt-6 max-w-[200px]">
+          <h3 className="leading-10 text-[22px] font-sans capitalize tracking-wide font-semibold">
+            Oscar Winners
+          </h3>
+          <p className="mt-2 italic text-sm text-end text-icons-200">
+            Best Picture Category
+          </p>
+        </div>
+        <Slides dataProp={SlideClassicMovie} />
+      </div>
+
+      <div className="pt-6 max-w-[450px]">
+        <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide">
+          Discover cinematic magic
+        </h3>
+        <h3 className="leading-10 text-xl font-sans italic capitalize tracking-wide text-end">
+          Search your favorite movie here!
+        </h3>
+      </div>
+
+      <form onSubmit={(e) => e.preventDefault()} className="py-8">
         <div className="w-full flex items-center max-w-[550px]">
           <input
-            className="w-full h-10 py-2 px-4 rounded-l-md bg-slate-100 shadow-card border-none outline-none text-gray-600"
+            className="w-full h-10 py-2 px-4 rounded-l-md bg-light-50 shadow-card border-none outline-none text-gray-600"
             placeholder="Search for movies"
             required
             value={searchTerm}
@@ -99,7 +124,7 @@ const HomePage = () => {
 
         <div className="flex items-center my-5 gap-8">
           <select
-            className="w-20 h-10 p-2 rounded-md bg-slate-100 border-none text-gray-600 cursor-pointer"
+            className="w-20 h-10 p-2 rounded-md bg-light-50 border-none text-gray-600 cursor-pointer"
             value={year}
             onChange={(e) => setYear(e.target.value)}
           >
@@ -114,7 +139,7 @@ const HomePage = () => {
           </select>
 
           <select
-            className="w-24 h-10 p-2 bg-slate-100 cursor-pointer border-none text-gray-600 rounded-md"
+            className="w-24 h-10 p-2 bg-light-50 cursor-pointer border-none text-gray-600 rounded-md"
             value={type}
             onChange={(e) => setType(e.target.value)}
           >
