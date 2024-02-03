@@ -11,16 +11,27 @@ export const SlideMovies = [
 
 export const SlideSeries = [
   { title: "Last of us" },
-  { title: "Breaking Bad" },
-  { title: "Game of Thrones" },
   { title: "The Queen's Gambit" },
   { title: "Peaky Blinders" },
   { title: "Wednesday" },
   { title: "Moon Knight" },
   { title: "Sherlock" },
   { title: "The Walking Dead" },
+  { title: "Doctor Who" },
+  { title: "Chernobyl" },
+  { title: "Better Call Saul" },
+  { title: "Watchmen" },
+  { title: "Sons of Anarchy" },
+  { title: "The Leftovers" },
 ];
-
+export const SlideBestSeries = [
+  { title: "Breaking Bad" },
+  { title: "Game of Thrones" },
+  { title: "Friends" },
+  { title: "The Wire" },
+  { title: "The Office" },
+  { title: "True Detective" },
+];
 export const SlideAnime = [
   { title: "Demon Slayer: Kimetsu no Yaiba" },
   { title: "Solo Leveling" },
@@ -37,6 +48,6 @@ export const SlideClassicMovie = [
   { title: "Braveheart" },
   { title: "Schindler's List" },
   { title: "Gladiator" },
-  { title: "12 Years a Slave" },
   { title: "The Godfather" },
+  { title: "12 Years a Slave" },
 ];

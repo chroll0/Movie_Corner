@@ -157,7 +157,7 @@ const HomePage = () => {
           ))}
         </div>
       ) : (
-        <div className="empty">
+        <div>
           <h2>No movies found</h2>
         </div>
       )}

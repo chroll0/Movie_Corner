@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { BsBookmarkPlusFill } from "react-icons/bs";
 
 interface MovieCardProps {
@@ -13,6 +16,25 @@ interface MovieCardProps {
 const MovieCard = ({
   movie: { imdbID, Year, Poster, Title, Type },
 }: MovieCardProps) => {
+  const [isBookmarked, setIsBookmarked] = useState(
+    localStorage.getItem(imdbID) !== null
+  );
+
+  const toggleBookmark = () => {
+    if (isBookmarked) {
+      localStorage.removeItem(imdbID);
+    } else {
+      localStorage.setItem(
+        imdbID,
+        JSON.stringify({ imdbID, Year, Poster, Title, Type })
+      );
+    }
+    setIsBookmarked(!isBookmarked);
+  };
+  if (!Title || Title.trim() === "") {
+    return null;
+  }
+
   return (
     <div
       className="text-light-50 relative group movie cursor-pointer hover:scale-110 transition-all duration-300"
@@ -24,7 +46,12 @@ const MovieCard = ({
       >
         <div className="flex items-center justify-between w-full">
           <p className="font-semibold text-base">{Year}</p>
-          <BsBookmarkPlusFill className="hover:text-icons-200 text-light-50 transition-all duration-300" />
+          <BsBookmarkPlusFill
+            className={`hover:text-icons-200 text-light-50 transition-all duration-300 ${
+              isBookmarked ? "text-red-500" : ""
+            }`}
+            onClick={toggleBookmark}
+          />
         </div>
       </div>
       <div className="w-full h-full">
