@@ -43,7 +43,23 @@ export default function RootLayout({
         <>
           <Navbar onToggleTheme={toggleTheme} currentTheme={theme} />
 
-          <div className="flex flex-col items-center paddings">{children}</div>
+          <div className="flex flex-col items-center paddings">
+            <div className="w-full px-8 sm:px-0">
+              <h1 className="font-sans text-[32px] md:text-[44px] font-extrabold tracking-wider text-gradient">
+                Movie Corner
+              </h1>
+
+              <div className="py-12 max-w-[400px]">
+                <h3 className="leading-8 text-lg font-sans italic capitalize tracking-wide">
+                  Cinematic Delights Across Eras,
+                </h3>
+                <h3 className="leading-8 text-lg font-sans italic capitalize tracking-wide text-end">
+                  Movies for All Tastes
+                </h3>
+              </div>
+            </div>
+            {children}
+          </div>
         </>
       )}
     </main>

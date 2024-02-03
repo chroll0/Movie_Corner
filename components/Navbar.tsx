@@ -22,9 +22,9 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, currentTheme }) => {
         }
 `}
       >
-        <MdMovie className="w-8 h-8 text-icons-200" />
+        <MdMovie className="w-9 h-9 text-icons-200" />
 
-        <div className="flex md:flex-col sm:gap-10 gap-6 flex-row md:mb-36 lg:mb-44 mb-0">
+        <div className="flex md:flex-col sm:gap-10 gap-6 flex-row md:mb-36 mb-0">
           <Link href="/" scroll={true}>
             <IoGrid className="navbar_icons" />
           </Link>

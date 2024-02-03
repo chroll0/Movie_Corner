@@ -1,12 +1,18 @@
 export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const SlideMovies = [
-  { title: "Madame Web" },
+  { title: "Furiosa: A Mad Max Saga" },
   { title: "Dune: Part Two" },
-  { title: "Barbie" },
-  { title: "Oppenheimer" },
-  { title: "Thanksgiving" },
-  { title: "Avatar: The Way of Water" },
+  { title: "Challengers", year: "2024" },
+  { title: "Joker: Folie a Deux" },
+  { title: "Gladiator 2" },
+  { title: "Deadpool 3", year: "2024" },
+  { title: "Bob Marley: One Love", year: "2024" },
+  { title: "Despicable Me 4 " },
+  { title: "Kung Fu Panda 4" },
+  { title: "Kingdom of the Planet of the Apes" },
+  { title: "Madame Web" },
+  { title: "Godzilla x Kong: The New Empire" },
 ];
 
 export const SlideSeries = [
@@ -39,15 +45,14 @@ export const SlideAnime = [
 ];
 
 export const SlideClassicMovie = [
-  { title: "Green book" },
-  { title: "No Country for Old Men" },
-  { title: "Crash" },
   { title: "Parasite" },
+  { title: "Green book" },
+  { title: "The Shape of Water" },
+  { title: "No Country for Old Men" },
   { title: "The Departed" },
-  { title: "Rain Man" },
-  { title: "Braveheart" },
-  { title: "Schindler's List" },
+  { title: "Crash" },
+  { title: "A Beautiful Mind" },
   { title: "Gladiator" },
+  { title: "Rain Man" },
   { title: "The Godfather" },
-  { title: "12 Years a Slave" },
 ];

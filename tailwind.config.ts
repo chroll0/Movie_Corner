@@ -30,6 +30,7 @@ const config: Config = {
       },
       boxShadow: {
         slide: "1px 1px 8px 1px #b3b3b3",
+        slider: "0px 10px 20px -10px #b3b3b3",
       },
       screens: { xsm: "470px" },
     },
