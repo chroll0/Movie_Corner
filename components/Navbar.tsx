@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, currentTheme }) => {
             <RiFilmFill className="navbar_icons" />
           </Link>
 
-          <Link href="../serials">
+          <Link href="../series">
             <PiTelevisionBold className="navbar_icons" />
           </Link>
 

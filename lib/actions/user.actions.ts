@@ -5,11 +5,7 @@ import { revalidatePath } from "next/cache";
 import { CreateUserParams, UpdateUserParams } from "../../types";
 import { connectToDatabase } from "../database";
 import User from "../database/models/user.model";
-
-export const handleError = (error: unknown) => {
-  console.error(error);
-  throw new Error(typeof error === "string" ? error : JSON.stringify(error));
-};
+import { handleError } from "../utils";
 
 export async function createUser(user: CreateUserParams) {
   try {

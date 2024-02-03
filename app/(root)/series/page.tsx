@@ -1,7 +1,7 @@
 import Slides from "../../../components/Slides";
 import { SlideBestSeries, SlideSeries } from "../../../constants/Database";
 
-const Serials = () => {
+const Series = () => {
   return (
     <div className="font-poppins hide-scrollbar overflow-x-auto w-full flex flex-col justify-center p-1">
       <div>
@@ -30,4 +30,4 @@ const Serials = () => {
   );
 };
 
-export default Serials;
+export default Series;
