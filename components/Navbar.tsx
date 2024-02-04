@@ -24,12 +24,12 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, currentTheme }) => {
       >
         <MdMovie className="w-9 h-9 text-icons-200" />
 
-        <div className="flex md:flex-col sm:gap-10 gap-6 flex-row md:mb-36 mb-0">
+        <div className="sm:flex md:flex-col sm:gap-10 gap-6 flex-row md:mb-36 mb-0 hidden">
           <Link href="/" scroll={true}>
             <IoGrid className="navbar_icons" />
           </Link>
 
-          <Link href="../films">
+          <Link href="../anime">
             <RiFilmFill className="navbar_icons" />
           </Link>
 
@@ -42,25 +42,35 @@ const Navbar: React.FC<NavbarProps> = ({ onToggleTheme, currentTheme }) => {
           </Link>
         </div>
 
-        <SignedIn>
-          <UserButton afterSignOutUrl="/" />
-        </SignedIn>
+        <div
+          className={`w-[200px] h-[300px] absolute top-[100px] shadow-slide hidden ${
+            currentTheme === "dark" ? "dark_elements" : "light_elements"
+          }`}
+        ></div>
 
-        <SignedOut>
-          <Link href="/sign-in">
-            <button
-              className="w-full text-light-50 py-2 px-4 rounded-md tracking-wider max-w-[80px] text-sm 
+        <div className="flex items-center flex-row md:flex-col">
+          <div className="md:mb-8 mb-0 md:mr-0 mr-8">
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
+
+            <SignedOut>
+              <Link href="/sign-in">
+                <button
+                  className="w-full text-light-50 py-2 px-4 rounded-md tracking-wider max-w-[80px] text-sm 
             transition-all duration-300 bg-icons-200 hover:bg-icons-100"
-            >
-              Login
-            </button>
-          </Link>
-        </SignedOut>
+                >
+                  Login
+                </button>
+              </Link>
+            </SignedOut>
+          </div>
 
-        <ThemeChanger
-          onToggleTheme={onToggleTheme}
-          currentTheme={currentTheme}
-        />
+          <ThemeChanger
+            onToggleTheme={onToggleTheme}
+            currentTheme={currentTheme}
+          />
+        </div>
       </nav>
     </div>
   );

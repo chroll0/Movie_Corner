@@ -54,7 +54,7 @@ export default function RootLayout({
                   Cinematic Delights Across Eras,
                 </h3>
                 <h3 className="leading-8 text-lg font-sans italic capitalize tracking-wide text-end">
-                  Movies for All Tastes
+                  Entertainment for All Tastes
                 </h3>
               </div>
             </div>

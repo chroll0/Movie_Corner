@@ -15,6 +15,19 @@ export const SlideMovies = [
   { title: "Godzilla x Kong: The New Empire" },
 ];
 
+export const ClassicMovie = [
+  { title: "Parasite" },
+  { title: "Green book" },
+  { title: "The Shape of Water" },
+  { title: "No Country for Old Men" },
+  { title: "The Departed" },
+  { title: "Crash" },
+  { title: "A Beautiful Mind" },
+  { title: "Gladiator" },
+  { title: "Rain Man" },
+  { title: "The Godfather" },
+];
+
 export const SlideSeries = [
   { title: "Last of us" },
   { title: "The Queen's Gambit" },
@@ -30,29 +43,35 @@ export const SlideSeries = [
   { title: "Sons of Anarchy" },
   { title: "The Leftovers" },
 ];
-export const SlideBestSeries = [
+export const BestSeries = [
   { title: "Breaking Bad" },
   { title: "Game of Thrones" },
   { title: "Friends" },
   { title: "The Wire" },
   { title: "The Office" },
   { title: "True Detective" },
-];
-export const SlideAnime = [
-  { title: "Demon Slayer: Kimetsu no Yaiba" },
-  { title: "Solo Leveling" },
-  { title: "The Boy and the Heron" },
+  { title: "The Boys" },
+  { title: "Black Mirror" },
 ];
 
-export const SlideClassicMovie = [
-  { title: "Parasite" },
-  { title: "Green book" },
-  { title: "The Shape of Water" },
-  { title: "No Country for Old Men" },
-  { title: "The Departed" },
-  { title: "Crash" },
-  { title: "A Beautiful Mind" },
-  { title: "Gladiator" },
-  { title: "Rain Man" },
-  { title: "The Godfather" },
+export const SlideAnime = [
+  { title: "Demon Slayer To the Hashira Training" },
+  { title: "Solo Leveling" },
+  { title: "One Piece" },
+  { title: "Attack on Titan" },
+  { title: "Vinland Saga" },
+  { title: "Chainsaw Man" },
+  { title: "Cyberpunk: Edgerunners" },
+  { title: "Heavenly Delusion" },
+  { title: "The Unwanted Undead Adventure" },
+];
+export const TopAnime = [
+  { title: "Hunter X Hunter" },
+  { title: "Fullmetal Alchemist: Brotherhood" },
+  { title: "Naruto: Shippuden" },
+  { title: "Cowboy Bebop" },
+  { title: "Code geass" },
+  { title: "Berserk" },
+  { title: "Gurren Lagann" },
+  { title: "Neon Genesis Evangelion" },
 ];
