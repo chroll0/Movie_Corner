@@ -70,7 +70,7 @@ const Slides = ({ dataProp }: SlidesProps) => {
   }, [firstMovies]);
 
   return (
-    <div className="py-16 px-1 hide-scrollbar overflow-x-hidden w-full">
+    <div className="py-16 px-1 scrollbar overflow-x-auto w-full">
       <div ref={sliderRef} className="flex gap-16">
         {firstMovies.map((movie, index) => (
           <div
