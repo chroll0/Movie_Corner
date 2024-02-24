@@ -3,15 +3,15 @@ export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 export const SlideMovies = [
   { title: "Furiosa: A Mad Max Saga" },
   { title: "Dune: Part Two" },
+  { title: "Madame Web" },
   { title: "Challengers", year: "2024" },
-  { title: "Joker: Folie a Deux" },
-  { title: "Gladiator 2" },
-  { title: "Deadpool 3", year: "2024" },
+  { title: "Argylle" },
+  { title: "Kraven the Hunter ", year: "2024" },
   { title: "Bob Marley: One Love", year: "2024" },
   { title: "Despicable Me 4 " },
   { title: "Kung Fu Panda 4" },
+  { title: "Gladiator 2" },
   { title: "Kingdom of the Planet of the Apes" },
-  { title: "Madame Web" },
   { title: "Godzilla x Kong: The New Empire" },
 ];
 
