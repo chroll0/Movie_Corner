@@ -19,6 +19,6 @@ const FilmsSchema = new Schema({
   bookmarked: { type: Boolean, default: true },
 });
 
-const Film = models.User || model("Film", FilmsSchema);
+const Film = models.Film || model("Film", FilmsSchema);
 
 export default Film;
