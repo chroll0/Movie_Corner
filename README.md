@@ -10,6 +10,9 @@ Welcome to Movie Corner, your go-to spot for all things related to movies and te
 - Next.js
 - TypeScript
 - Tailwind CSS
+- MongoDB
+- Clerck
+- REST API
 
 ## Features
 - Stay informed about the newest movie releases.
