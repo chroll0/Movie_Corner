@@ -1,4 +1,4 @@
-![web-project06](https://github.com/chroll0/Movie_Corner/assets/89222386/04d84c46-7da4-418b-8ac6-dd6c9ce54145)
+![web-project01](https://github.com/chroll0/Movie_Corner/assets/89222386/6975e0ac-34bd-4d90-9391-246a56c35209)
 
 # Movie Corner 🍿
 
