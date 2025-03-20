@@ -1,16 +1,16 @@
 export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const SlideMovies = [
-  { title: "Furiosa: A Mad Max Saga" },
+  { title: "Snow White", year: "2025" },
   { title: "Dune: Part Two" },
-  { title: "Madame Web" },
-  { title: "Challengers", year: "2024" },
-  { title: "Argylle" },
+  { title: "Happy Gilmore 2" },
+  { title: "Last Breath", year: "2024" },
+  { title: "Jurassic World Rebirth", year: "2025" },
   { title: "Kraven the Hunter", year: "2024" },
   { title: "Bob Marley: One Love", year: "2024" },
   { title: "Despicable Me 4" },
   { title: "Kung Fu Panda 4" },
-  { title: "Gladiator 2" },
+  { title: "Gladiator II" },
   { title: "Kingdom of the Planet of the Apes" },
   { title: "Godzilla x Kong: The New Empire" },
 ];
@@ -70,8 +70,10 @@ export const TopAnime = [
   { title: "Fullmetal Alchemist: Brotherhood" },
   { title: "Naruto: Shippuden" },
   { title: "Cowboy Bebop" },
+  { title: "Death Note" },
   { title: "Code geass" },
   { title: "Berserk" },
   { title: "Gurren Lagann" },
+  { title: "Solo Leveling: ReAwakening" },
   { title: "Neon Genesis Evangelion" },
 ];

@@ -1,22 +1,5 @@
-"use client";
-
-import { BiSearchAlt } from "react-icons/bi";
-
-import { useState, useEffect } from "react";
-import MovieCard from "../../../components/MovieCard";
-import Slides from "../../../components/Slides";
-
+import { MoviesToWatch, Search, Slides } from "../../../components";
 import { SlideAnime, TopAnime } from "../../../constants/Database";
-import Search from "../../../components/Search";
-import MoviesToWatch from "../../../components/MoviesToWatch";
-
-interface MovieProps {
-  imdbID: string;
-  Year: string;
-  Poster: string;
-  Title: string;
-  Type: string;
-}
 
 const Anime = () => {
   return (

@@ -77,8 +77,12 @@ const Slides = ({ dataProp }: SlidesProps) => {
             key={index}
             className="min-w-[230px] max-w-[260px] hide-scrollbar flex flex-col"
           >
-            <div className="h-[310px] bg-gray-300 overflow-y-hidden rounded-lg shadow-slide">
-              <img src={movie.Poster} alt={movie.Title} />
+            <div className="h-[340px] bg-gray-300 overflow-y-hidden rounded-lg shadow-slide">
+              <img
+                className="h-full w-full"
+                src={movie.Poster}
+                alt={movie.Title}
+              />
             </div>
           </div>
         ))}

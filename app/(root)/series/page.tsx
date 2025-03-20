@@ -1,6 +1,4 @@
-import MoviesToWatch from "../../../components/MoviesToWatch";
-import Search from "../../../components/Search";
-import Slides from "../../../components/Slides";
+import { MoviesToWatch, Search, Slides } from "../../../components";
 import { BestSeries, SlideSeries } from "../../../constants/Database";
 
 const Series = () => {
