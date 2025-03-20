@@ -4,19 +4,11 @@ import { BiSearchAlt } from "react-icons/bi";
 import MovieCard from "./MovieCard";
 import { API_URL } from "../constants/Database";
 import { useState } from "react";
-
-interface MovieProps {
-  imdbID: string;
-  Year: string;
-  Poster: string;
-  Title: string;
-  Type: string;
-}
+import { MovieProps } from "../types";
 
 const Search = () => {
   const [type, setType] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
-
   const [movies, setMovies] = useState<MovieProps[]>([]);
   const [year, setYear] = useState("");
 
@@ -28,10 +20,8 @@ const Search = () => {
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.keyCode === 13) {
-      if (searchTerm.trim() !== "") {
-        searchMovies(searchTerm);
-      }
+    if (e.key === "Enter" && searchTerm.trim() !== "") {
+      searchMovies(searchTerm);
     }
   };
   const searchMovies = async (title: string) => {
@@ -44,9 +34,14 @@ const Search = () => {
       url += `&type=${type}`;
     }
 
-    const response = await fetch(url);
-    const data = await response.json();
-    setMovies(data.Search);
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setMovies(data.Search || []);
+    } catch (error) {
+      console.error("Error fetching movies:", error);
+      setMovies([]);
+    }
   };
   return (
     <div className="px-8 sm:px-0">
@@ -80,9 +75,7 @@ const Search = () => {
             value={year}
             onChange={(e) => setYear(e.target.value)}
           >
-            <option value="" disabled>
-              Year
-            </option>
+            <option value="">Year</option>
             {years.map((yearOption) => (
               <option key={yearOption} value={yearOption}>
                 {yearOption}
@@ -108,7 +101,9 @@ const Search = () => {
           ))}
         </div>
       ) : (
-        <div>{/* <h2>No movies found</h2> */}</div>
+        <div>
+          <h2>No movies found</h2>
+        </div>
       )}
     </div>
   );

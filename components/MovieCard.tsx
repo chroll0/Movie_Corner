@@ -2,16 +2,7 @@
 
 import { useState } from "react";
 import { BsBookmarkPlusFill } from "react-icons/bs";
-
-interface MovieCardProps {
-  movie: {
-    imdbID: string;
-    Year: string;
-    Poster: string;
-    Title: string;
-    Type: string;
-  };
-}
+import { MovieCardProps } from "../types";
 
 const MovieCard = ({
   movie: { imdbID, Year, Poster, Title, Type },

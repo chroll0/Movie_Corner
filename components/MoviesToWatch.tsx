@@ -1,28 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
+import React, { useEffect, useState } from "react";
 import { API_URL } from "../constants/Database";
-
-interface MovieSearchResponse {
-  Search: MovieProps[];
-}
-
-interface MovieProps {
-  imdbID: string;
-  Year: string;
-  Poster: string;
-  Title: string;
-  Type: string;
-}
-
-interface SlideMovie {
-  title: string;
-}
-
-interface Props {
-  MovieData: SlideMovie[];
-}
+import { MovieProps, MovieSearchResponse, Props } from "../types";
 
 const MoviesToWatch = ({ MovieData }: Props) => {
   const [movies, setMovies] = useState<MovieProps[]>([]);

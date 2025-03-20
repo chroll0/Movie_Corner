@@ -2,22 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { API_URL } from "../constants/Database";
-
-interface MovieProps {
-  imdbID: string;
-  Year: string;
-  Poster: string;
-  Title: string;
-  Type: string;
-}
-interface SlideData {
-  title: string;
-  year?: string;
-}
-
-interface SlidesProps {
-  dataProp: SlideData[];
-}
+import { MovieProps, SlidesProps } from "../types";
 
 const Slides = ({ dataProp }: SlidesProps) => {
   const [firstMovies, setFirstMovies] = useState<MovieProps[]>([]);
@@ -47,7 +32,7 @@ const Slides = ({ dataProp }: SlidesProps) => {
       const handleAnimation = () => {
         const firstChild = slider.children[0] as HTMLElement; // Type assertion
         if (firstChild) {
-          const width = firstChild.offsetWidth + 64;
+          const width = firstChild.offsetWidth + 100;
           slider.style.transition = "transform 9s linear"; // Adjust the transition duration to control the speed
           slider.style.transform = `translateX(-${width}px)`; // Move the slider slowly to the left
           const transitionEndHandler = () => {
@@ -55,13 +40,13 @@ const Slides = ({ dataProp }: SlidesProps) => {
             slider.style.transition = "none";
             slider.style.transform = "translateX(0)";
             slider.removeEventListener("transitionend", transitionEndHandler);
-            interval = setTimeout(handleAnimation, 0); // Restart sliding after 5 seconds
+            interval = setTimeout(handleAnimation, 0); // Restart sliding
           };
           slider.addEventListener("transitionend", transitionEndHandler);
         }
       };
 
-      interval = setTimeout(handleAnimation, 2000); // Start sliding after 5 seconds initially
+      interval = setTimeout(handleAnimation, 500); // Start sliding
 
       const clearAnimation = () => clearInterval(interval);
 

@@ -147,3 +147,41 @@ export type SearchParamProps = {
   params: { id: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
+
+export interface MovieCardProps {
+  movie: {
+    imdbID: string;
+    Year: string;
+    Poster: string;
+    Title: string;
+    Type: string;
+  };
+}
+export interface MovieSearchResponse {
+  Search: MovieProps[];
+}
+
+export interface MovieProps {
+  imdbID: string;
+  Year: string;
+  Poster: string;
+  Title: string;
+  Type: string;
+}
+
+export interface SlideMovie {
+  title: string;
+}
+
+export interface Props {
+  MovieData: SlideMovie[];
+}
+
+export interface SlideData {
+  title: string;
+  year?: string;
+}
+
+export interface SlidesProps {
+  dataProp: SlideData[];
+}

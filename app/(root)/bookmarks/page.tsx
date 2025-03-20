@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import MovieCard from "../../../components/MovieCard";
+import { MovieCard } from "../../../components";
 
 interface MovieProps {
   imdbID: string;

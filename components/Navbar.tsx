@@ -8,9 +8,9 @@ import { MdBookmarks, MdMovie } from "react-icons/md";
 import Link from "next/link";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
-import ThemeChanger from "./ThemeChanger";
 import { useState } from "react";
 import { FaArrowDownShortWide } from "react-icons/fa6";
+import ThemeChanger from "./ThemeChanger";
 
 interface NavbarProps {
   onToggleTheme: () => void;
