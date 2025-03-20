@@ -1,4 +1,5 @@
 import { MoviesToWatch, Search, Slides } from "../../../components";
+import AddMessageForm from "../../../components/AddMessageForm";
 import { ClassicMovie, SlideMovies } from "../../../constants/Database";
 
 const HomePage = () => {
@@ -40,6 +41,7 @@ const HomePage = () => {
         </div>
         <MoviesToWatch MovieData={ClassicMovie} />
       </div>
+      <AddMessageForm />
     </div>
   );
 };
